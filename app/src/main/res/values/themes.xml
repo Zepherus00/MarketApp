@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StoreApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/element_white</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:textColor">@color/element_black</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.StoreApp" parent="Base.Theme.StoreApp" />
+
+    <style name="editTextColorControl">
+        <item name="colorControlActivated">@color/element_pink</item>
+    </style>
+
+    <style name="bottomNavMenuSettingsColor" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/txt_pink</item>
+        <item name="colorOnPrimary">@color/txt_black</item>
+    </style>
+
+    <style name="MyRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/element_grey</item>
+        <item name="colorControlActivated">@color/element_orange</item>
+    </style>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutMatchStyle"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_frg_profile"
+        style="@style/titleFragment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:text="@string/title_frg_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/block_user_info_frg_profile"
+        style="@style/block_user_frg_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_frg_profile">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_user_frg_profile"
+            style="@style/ic_user_frg_profile"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/full_name_frg_profile"
+            style="@style/full_name_frg_profile"
+            app:layout_constraintBottom_toTopOf="@id/ic_user_frg_profile"
+            app:layout_constraintStart_toEndOf="@id/ic_user_frg_profile"
+            app:layout_constraintTop_toTopOf="@id/ic_user_frg_profile"
+            tools:text="Марина Иванова" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phone_number_frg_profile"
+            style="@style/phone_frg_profile"
+            app:layout_constraintBottom_toBottomOf="@id/ic_user_frg_profile"
+            app:layout_constraintStart_toEndOf="@id/ic_user_frg_profile"
+            app:layout_constraintTop_toBottomOf="@id/ic_user_frg_profile"
+            tools:text="+ 7 900 135-89-85" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/ic_exit_frg_profile"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_favorite_frg_profile"
+        style="@style/btn_favorite_frg_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/block_user_info_frg_profile">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_favorite_frg_profile"
+            style="@style/ic_favorite_frg_profile"
+            android:src="@drawable/ic_favorite_empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/title_favorite_frg_profile"
+            android:text="@string/btn_favorite_frg_profile"
+            app:layout_constraintBottom_toTopOf="@id/ic_favorite_frg_profile"
+            app:layout_constraintStart_toEndOf="@id/ic_favorite_frg_profile"
+            app:layout_constraintTop_toTopOf="@id/ic_favorite_frg_profile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/product_count_frg_profile"
+            style="@style/count_favorites_frg_profile"
+            app:layout_constraintBottom_toBottomOf="@id/ic_favorite_frg_profile"
+            app:layout_constraintStart_toEndOf="@id/ic_favorite_frg_profile"
+            app:layout_constraintTop_toBottomOf="@id/ic_favorite_frg_profile"
+            tools:text="1 товар" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/ic_right_arrow_frg_profile"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_favorite_frg_profile">
+
+        <include layout="@layout/merge_profile_buttons" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_exit_frg_profile"
+        style="@style/btn_exit_frg_profile"
+        android:text="@string/btn_exit_frg_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

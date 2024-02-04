@@ -1,0 +1,50 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <FrameLayout style="@style/btn_frg_profile">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/btn_text_frg_profile"
+                android:text="@string/btn_stores_frg_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ic_right_arrow_frg_profile"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_arrow_right" />
+        </FrameLayout>
+
+        <FrameLayout style="@style/btn_frg_profile">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/btn_text_frg_profile"
+                android:text="@string/btn_feedback_frg_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ic_right_arrow_frg_profile"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_arrow_right" />
+        </FrameLayout>
+
+        <FrameLayout style="@style/btn_frg_profile">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/btn_text_frg_profile"
+                android:text="@string/btn_offer_frg_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ic_right_arrow_frg_profile"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_arrow_right" />
+        </FrameLayout>
+
+        <FrameLayout style="@style/btn_frg_profile">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/btn_text_frg_profile"
+                android:text="@string/btn_product_return_frg_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ic_right_arrow_frg_profile"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_arrow_right" />
+        </FrameLayout>
+</merge>

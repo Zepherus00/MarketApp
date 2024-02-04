@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">StoreApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="count_available_products">Доступно для заказа %1$s %2$s</string>
+    <string name="count_item">%1$s %2$s</string>
+    <string name="title_frg_registration">Вход</string>
+    <string name="name_hint_frg_registration">Имя</string>
+    <string name="last_name_hint_frg_registration">Фамилия</string>
+    <string name="phone_hint_frg_registration">Номер телефона</string>
+    <string name="btn_enter_frg_registration">Войти</string>
+    <string name="loyal_program_1_frg_registration">Нажимая кнопку “Войти”, Вы принимаете</string>
+    <string name="loyal_program_2_frg_registration">условия программы лояльности</string>
+    <string name="title_home_main_menu">Главная</string>
+    <string name="title_catalog_main_menu">Каталог</string>
+    <string name="title_cart_main_menu">Корзина</string>
+    <string name="title_promo_main_menu">Акции</string>
+    <string name="title_profile_main_menu">Профиль</string>
+    <string name="title_frg_home">Главная</string>
+    <string name="title_frg_profile">Личный кабинет</string>
+    <string name="btn_favorite_frg_profile">Избранное</string>
+    <string name="btn_stores_frg_profile">Магазины</string>
+    <string name="btn_feedback_frg_profile">Обратная связь</string>
+    <string name="btn_offer_frg_profile">Оферта</string>
+    <string name="btn_product_return_frg_profile">Возврат товара</string>
+    <string name="btn_exit_frg_profile">Выйти</string>
+    <string name="title_frg_favorites">Избранное</string>
+    <string name="title_frg_brands">Бренды</string>
+    <string name="title_frg_promo">Акции</string>
+    <string name="title_frg_cart">Корзина</string>
+    <string name="dot_frg_item">•</string>
+    <string name="subscription_frg_item">Описание</string>
+    <string name="btn_subscription_frg_item">Скрыть</string>
+    <string name="character_title_frg_item">Характеристики</string>
+    <string name="ingredients_frg_item">Состав</string>
+    <string name="btn_ingredients_frg_item">Подробнее</string>
+    <string name="add_cart_frg_item">Добавить в корзину</string>
+    <string name="title_frg_catalog">Каталог</string>
+    <string name="btn_sort_frg_catalog">По популярности</string>
+    <string name="btn_filter_frg_catalog">Фильтры</string>
+    <string name="btn_popular_frg_catalog">По популярности</string>
+    <string name="btn_price_down_frg_catalog">По уменьшению цены</string>
+    <string name="btn_up_frg_catalog">По возрастанию цены</string>
+    <string name="mask_phone_frg_registration">+7 ХХХ ХХХ ХХ ХХ</string>
+    <string name="text_phone_frg_registration">Номер телефона</string>
+    <string name="incorrect_input_frg_registration">Некорректный ввод</string>
+    <string name="full_name_frg_profile">%1$s %2$s</string>
+    <string name="products_text_frg_favorites">Товары</string>
+    <string name="brands_text_frg_favorites">Бренды</string>
+    <string name="current_price_frg_item">%1$s %2$s</string>
+    <string name="old_price_frg_item">%1$s %2$s</string>
+</resources>

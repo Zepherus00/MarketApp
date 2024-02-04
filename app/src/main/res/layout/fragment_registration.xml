@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutMatchStyle"
+    android:background="@color/bg_white">
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/titleFragment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:text="@string/title_frg_registration" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat style="@style/layout_edit_group_frg_registration">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_name_frg_registration"
+            style="@style/edit_layout_frg_registration"
+            app:boxBackgroundColor="@color/bg_light_grey"
+            app:boxStrokeWidth="0dp"
+            app:endIconDrawable="@drawable/ic_delete"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_frg_registration"
+                style="@style/edit_text_frg_registration"
+                android:hint="@string/name_hint_frg_registration"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_last_name_frg_registration"
+            style="@style/edit_layout_frg_registration"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@color/bg_light_grey"
+            app:boxStrokeWidth="0dp"
+            app:endIconDrawable="@drawable/ic_delete"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/last_name_frg_registration"
+                style="@style/edit_text_frg_registration"
+                android:hint="@string/last_name_hint_frg_registration"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_phone_frg_registration"
+            style="@style/edit_layout_frg_registration"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@color/bg_light_grey"
+            app:boxStrokeWidth="0dp"
+            app:endIconDrawable="@drawable/ic_delete"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_frg_registration"
+                style="@style/edit_text_frg_registration"
+                android:hint="@string/phone_hint_frg_registration"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_enter_frg_registration"
+            style="@style/btn_enter_frg_registration"
+            android:text="@string/btn_enter_frg_registration" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout style="@style/layout_loyal_frg_registration">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/text_loyal_frg_registration"
+            android:text="@string/loyal_program_1_frg_registration" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_loyal_program_frg_registration"
+            style="@style/text_loyal_2_frg_registration"
+            android:text="@string/loyal_program_2_frg_registration" />
+    </LinearLayout>
+</FrameLayout>

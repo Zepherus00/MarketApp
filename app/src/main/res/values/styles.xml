@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="large_title_1">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="title_1">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="title_2">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="title_3">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="title_4">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_1">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="caption">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="button_text_1">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="button_text_2">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="element_text">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="price_text">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="placeholder_text">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="link_text">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="layoutMatchStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="layoutWrapStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="titleFragment" parent="title_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="btn_sort_frg_catalog" parent="title_4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:drawableStart">@drawable/ic_sort</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="btn_filter_frg_catalog" parent="title_4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawableStart">@drawable/ic_filter</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="recycler_view_carousel_frg_catalog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="recycler_view_products_frg_catalog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="layout_sorting_frg_catalog">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/bg_white_r8</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="btn_layout_sorting_frg_catalog" parent="title_4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="btn_back_frg_favorites">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="tab_layout_frg_favorites">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/bg_light_grey_r8</item>
+    </style>
+
+    <style name="view_pager_frg_favorites">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:paddingBottom">32dp</item>
+    </style>
+
+    <style name="btn_back_frg_item">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="btn_link_frg_item">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+    </style>
+
+    <style name="view_pager_frg_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="subtitle_frg_item" parent="large_title_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="available_products_count_frg_item" parent="text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="spacer_frg_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/bg_light_grey</item>
+    </style>
+
+    <style name="rating_text_frg_item" parent="text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="dot_frg_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="reciew_count_frg_item" parent="text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="price_frg_item" parent="price_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="old_price_frg_item" parent="text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="discount_frg_item" parent="element_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:background">@drawable/bg_pink_r4</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:textColor">@color/element_white</item>
+    </style>
+
+    <style name="subscription_title_frg_item" parent="title_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+    </style>
+
+    <style name="btn_brand_frg_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/ripple_btn_grey</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="title_brand_frg_item" parent="title_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ic_right_arrow_frg_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="subscription_text_frg_item" parent="text_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="btn_more_hide_frg_item" parent="button_text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="title_character_frg_item" parent="title_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+    </style>
+
+    <style name="layout_horizontal_info_frg_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="bottom_line_frg_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:background">@color/element_grey</item>
+    </style>
+
+    <style name="left_text_info_frg_item" parent="text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="right_text_info_frg_item" parent="text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="title_ingredients_frg_item" parent="title_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+    </style>
+
+    <style name="ic_copy_frg_item">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="ingredients_text_frg_item" parent="text_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">2</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="btn_add_cart_frg_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:background">@drawable/bg_pink_r8</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="price_cart_frg_item" parent="button_text_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/element_white</item>
+    </style>
+
+    <style name="old_price_cart_frg_item" parent="caption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textColor">@color/txt_light_pink</item>
+    </style>
+
+    <style name="text_add_cart_frg_item" parent="button_text_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:textColor">@color/element_white</item>
+    </style>
+
+    <style name="layout_rv_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/ripple_btn_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="old_price_rv_item" parent="element_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="price_rv_item" parent="title_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="discount_rv_item" parent="element_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:background">@drawable/bg_pink_r4</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textColor">@color/element_white</item>
+    </style>
+
+    <style name="title_rv_item" parent="title_3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="description_rv_item" parent="caption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">3</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:textColor">@color/txt_dark_grey</item>
+    </style>
+
+    <style name="rate_rv_item" parent="element_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:drawableStart">@drawable/ic_rate</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/txt_orange</item>
+    </style>
+
+    <style name="count_rating_tv_item" parent="element_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="btn_add_rv_item">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/ripple_btn_add_product</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="layout_edit_group_frg_registration">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="edit_layout_frg_registration">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/editTextColorControl</item>
+    </style>
+
+    <style name="edit_text_frg_registration" parent="placeholder_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="btn_enter_frg_registration" parent="button_text_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:background">@drawable/selector_btn_pink</item>
+        <item name="android:enabled">false</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/txt_white</item>
+    </style>
+
+    <style name="layout_loyal_frg_registration">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal|bottom</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="text_loyal_frg_registration" parent="caption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="text_loyal_2_frg_registration" parent="caption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="block_user_frg_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">36dp</item>
+        <item name="android:background">@drawable/ripple_btn_grey</item>
+    </style>
+
+    <style name="ic_user_frg_profile">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+
+    <style name="full_name_frg_profile" parent="title_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
+    <style name="phone_frg_profile" parent="caption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="ic_exit_frg_profile">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="btn_favorite_frg_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:background">@drawable/ripple_btn_grey</item>
+    </style>
+
+    <style name="ic_favorite_frg_profile">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+
+    <style name="title_favorite_frg_profile" parent="title_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
+    <style name="count_favorites_frg_profile" parent="caption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textColor">@color/txt_grey</item>
+    </style>
+
+    <style name="ic_right_arrow_frg_profile">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="btn_frg_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/ripple_btn_grey</item>
+    </style>
+
+    <style name="btn_text_frg_profile" parent="title_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:drawableStart">@drawable/ic_store</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="btn_exit_frg_profile" parent="button_text_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:background">@drawable/ripple_btn_grey</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

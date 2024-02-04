@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutMatchStyle">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/layoutMatchStyle"
+        android:background="@color/bg_white"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/layoutMatchStyle"
+            android:background="@color/bg_white"
+            android:paddingBottom="100dp">
+
+            <FrameLayout
+                android:id="@+id/app_bar_frg_item"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/bg_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_back_frg_item"
+                    style="@style/btn_back_frg_item"
+                    android:src="@drawable/ic_arrow_left" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    style="@style/btn_link_frg_item"
+                    android:src="@drawable/ic_share" />
+            </FrameLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_frg_item"
+                style="@style/view_pager_frg_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/app_bar_frg_item" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_favorite_frg_item"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintEnd_toEndOf="@id/view_pager_frg_item"
+                app:layout_constraintTop_toTopOf="@id/view_pager_frg_item"
+                tools:src="@drawable/ic_favorite_empty" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@id/view_pager_frg_item"
+                app:layout_constraintStart_toStartOf="@id/view_pager_frg_item" />
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:id="@+id/spring_dots_frg_item"
+                style="@style/layoutWrapStyle"
+                android:layout_marginTop="16dp"
+                app:dampingRatio="0.5"
+                app:dotsColor="@color/element_pink"
+                app:dotsSize="6dp"
+                app:dotsStrokeColor="@color/element_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_pager_frg_item"
+                app:stiffness="300" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_frg_item"
+                style="@style/titleFragment"
+                android:layout_margin="16dp"
+                android:textColor="@color/txt_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spring_dots_frg_item"
+                tools:text="Title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subtitle_frg_item"
+                style="@style/subtitle_frg_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_frg_item"
+                tools:text="Subtitle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/available_frg_item"
+                style="@style/available_products_count_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle_frg_item"
+                tools:text="Доступно для заказа 100 шт" />
+
+            <View
+                android:id="@+id/spacer_frg_item"
+                style="@style/spacer_frg_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/available_frg_item" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rating_bar_frg_item"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:theme="@style/MyRatingBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spacer_frg_item" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rating_text_frg_item"
+                style="@style/rating_text_frg_item"
+                app:layout_constraintBottom_toBottomOf="@id/rating_bar_frg_item"
+                app:layout_constraintStart_toEndOf="@id/rating_bar_frg_item"
+                app:layout_constraintTop_toTopOf="@id/rating_bar_frg_item"
+                tools:text="4.3" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dot_frg_item"
+                style="@style/dot_frg_item"
+                android:text="@string/dot_frg_item"
+                app:layout_constraintBottom_toBottomOf="@id/rating_text_frg_item"
+                app:layout_constraintStart_toEndOf="@id/rating_text_frg_item"
+                app:layout_constraintTop_toTopOf="@id/rating_text_frg_item" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_count_frg_item"
+                style="@style/reciew_count_frg_item"
+                app:layout_constraintBottom_toBottomOf="@id/dot_frg_item"
+                app:layout_constraintStart_toEndOf="@id/dot_frg_item"
+                app:layout_constraintTop_toTopOf="@id/dot_frg_item"
+                tools:text="4 отзыва" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/current_price_frg_item"
+                style="@style/price_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rating_text_frg_item"
+                tools:text="549 Р" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/old_price_frg_item"
+                style="@style/old_price_frg_item"
+                app:layout_constraintBottom_toBottomOf="@id/current_price_frg_item"
+                app:layout_constraintStart_toEndOf="@id/current_price_frg_item"
+                app:layout_constraintTop_toTopOf="@id/current_price_frg_item"
+                tools:text="899 Р" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/discount_frg_item"
+                style="@style/discount_frg_item"
+                app:layout_constraintBottom_toBottomOf="@id/old_price_frg_item"
+                app:layout_constraintStart_toEndOf="@id/old_price_frg_item"
+                app:layout_constraintTop_toTopOf="@id/old_price_frg_item"
+                tools:text="-39%" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscription_title_frg_item"
+                style="@style/subscription_title_frg_item"
+                android:text="@string/subscription_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/current_price_frg_item" />
+
+            <FrameLayout
+                android:id="@+id/btn_brand_frg_item"
+                style="@style/btn_brand_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subscription_title_frg_item">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/brand_title"
+                    style="@style/title_brand_frg_item"
+                    tools:text="Бренд" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/ic_right_arrow_frg_item"
+                    android:src="@drawable/ic_arrow_right" />
+            </FrameLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscription_text_frg_item"
+                style="@style/subscription_text_frg_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_brand_frg_item"
+                tools:text="Пенка для губ и т.д." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btn_subscription_brand"
+                style="@style/btn_more_hide_frg_item"
+                android:text="@string/btn_subscription_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subscription_text_frg_item" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_character_frg_item"
+                style="@style/title_character_frg_item"
+                android:text="@string/character_title_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_subscription_brand" />
+
+            <FrameLayout
+                android:id="@+id/vendor_frg_item"
+                style="@style/layout_horizontal_info_frg_item"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_character_frg_item">
+
+                <View
+                    style="@style/bottom_line_frg_item"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/available_frg_item" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/vendor_code_title_frg_item"
+                    style="@style/left_text_info_frg_item"
+                    tools:text="Артикул товара" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/vendor_code_text_frg_item"
+                    style="@style/right_text_info_frg_item"
+                    tools:text="133987" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/used_area_frg_item"
+                style="@style/layout_horizontal_info_frg_item"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vendor_frg_item">
+
+                <View
+                    style="@style/bottom_line_frg_item"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/available_frg_item" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/used_area_title_frg_item"
+                    style="@style/left_text_info_frg_item"
+                    tools:text="Область использования" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/used_area_text_frg_item"
+                    style="@style/right_text_info_frg_item"
+                    tools:text="Лицо" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/country_frg_item"
+                style="@style/layout_horizontal_info_frg_item"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/used_area_frg_item">
+
+                <View
+                    style="@style/bottom_line_frg_item"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/available_frg_item" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/country_title_frg_item"
+                    style="@style/left_text_info_frg_item"
+                    tools:text="Страна производства" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/country_text_frg_item"
+                    style="@style/right_text_info_frg_item"
+                    tools:text="Республика Корея" />
+            </FrameLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ingredients_frg_item"
+                style="@style/title_ingredients_frg_item"
+                android:text="@string/ingredients_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/country_frg_item" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ic_copy_frg_item"
+                android:src="@drawable/ic_copy"
+                app:layout_constraintBottom_toBottomOf="@id/ingredients_frg_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ingredients_frg_item" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ingredients_text_frg_item"
+                style="@style/ingredients_text_frg_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_frg_item"
+                tools:text="Описание состава" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btn_ingredients_frg_item"
+                style="@style/btn_more_hide_frg_item"
+                android:text="@string/btn_ingredients_frg_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_text_frg_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_add_frg_item"
+        style="@style/btn_add_cart_frg_item">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/current_price_cart_frg_item"
+            style="@style/price_cart_frg_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="549 Р" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/old_price_cart_frg_item"
+            style="@style/old_price_cart_frg_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/current_price_cart_frg_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="899 Р" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/text_add_cart_frg_item"
+            android:text="@string/add_cart_frg_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

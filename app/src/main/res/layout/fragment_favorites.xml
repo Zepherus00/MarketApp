@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/layoutMatchStyle"
+    android:background="@color/bg_white">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_back_frg_favorites"
+        style="@style/btn_back_frg_favorites"
+        android:src="@drawable/ic_arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/titleFragment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:text="@string/title_frg_favorites"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back_frg_favorites"
+        app:layout_constraintStart_toEndOf="@id/btn_back_frg_favorites"
+        app:layout_constraintTop_toTopOf="@id/btn_back_frg_favorites" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_frg_favorites"
+        style="@style/tab_layout_frg_favorites"
+        app:tabIndicatorColor="@color/bg_light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back_frg_favorites"
+        app:tabSelectedTextColor="@color/element_black"
+        app:tabTextColor="@color/txt_grey" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_frg_favorites"
+        style="@style/view_pager_frg_favorites"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_frg_favorites" />
+</androidx.constraintlayout.widget.ConstraintLayout>
