@@ -10,6 +10,7 @@
     <string name="last_name_hint_frg_registration">Фамилия</string>
     <string name="phone_hint_frg_registration">Номер телефона</string>
     <string name="btn_enter_frg_registration">Войти</string>
+    <string name="btn_load_data_frg_catalog">Обновить</string>
     <string name="loyal_program_1_frg_registration">Нажимая кнопку “Войти”, Вы принимаете</string>
     <string name="loyal_program_2_frg_registration">условия программы лояльности</string>
     <string name="title_home_main_menu">Главная</string>

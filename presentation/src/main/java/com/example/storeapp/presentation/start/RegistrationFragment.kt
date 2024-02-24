@@ -5,15 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.domain.model.SaveUserModel
 import com.example.storeapp.R
 import com.example.storeapp.databinding.FragmentRegistrationBinding
+import com.example.storeapp.presentation.start.state.StartState
 import com.example.storeapp.presentation.utilities.AppOnTextChangedWatcher
 import com.example.storeapp.presentation.utilities.makeDisabled
+import com.example.storeapp.presentation.utilities.makeGone
+import com.example.storeapp.presentation.utilities.makeVisible
 import com.example.storeapp.presentation.utilities.setupPhoneMask
 import com.example.storeapp.presentation.utilities.setupUnderlineForText
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.regex.Pattern
 
@@ -39,9 +46,22 @@ class RegistrationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupPhoneMask(binding.phoneFrgRegistration)
-        setupUnderlineForText(binding.txtLoyalProgramFrgRegistration)
-        setListeners()
+        with(binding) {
+            setupPhoneMask(phoneFrgRegistration)
+            setupUnderlineForText(txtLoyalProgramFrgRegistration)
+            setListeners()
+
+            viewLifecycleOwner.lifecycleScope.launch {
+                viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    viewModel.value.state.collect { state ->
+                        when (state) {
+                            StartState.Success -> progressBarFrgRegistration.makeGone()
+                            is StartState.Loading -> progressBarFrgRegistration.makeVisible()
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private fun setListeners() {
@@ -84,7 +104,7 @@ class RegistrationFragment : Fragment() {
                     lastName = lastNameFrgRegistration.text.toString(),
                     phoneNumber = phoneFrgRegistration.text.toString()
                 )
-                viewModel.value.addNewUser(param)
+                viewModel.value.onEnterClick(param)
                 findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
             }
         }

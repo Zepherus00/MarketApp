@@ -5,14 +5,22 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.domain.model.SaveProductModel
 import com.example.storeapp.R
 import com.example.storeapp.databinding.FragmentCatalogBinding
 import com.example.storeapp.presentation.menu.catalog.adapter.CarouselAdapter
 import com.example.storeapp.presentation.menu.catalog.adapter.CatalogAdapter
+import com.example.storeapp.presentation.menu.catalog.state.CatalogState
+import com.example.storeapp.presentation.utilities.makeGone
+import com.example.storeapp.presentation.utilities.makeVisible
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CatalogFragment : Fragment() {
@@ -48,6 +56,36 @@ class CatalogFragment : Fragment() {
         setupRecyclerView()
         initData()
         setListeners()
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.state.collect { state ->
+                    when (state) {
+                        CatalogState.Success -> {
+                            binding.progressCatalog.makeGone()
+                            binding.btnRefreshFrgCatalog.makeGone()
+                        }
+
+                        CatalogState.Loading -> {
+                            binding.progressCatalog.makeVisible()
+                            binding.btnRefreshFrgCatalog.makeGone()
+                        }
+
+                        is CatalogState.Error -> {
+                            binding.progressCatalog.makeGone()
+                            binding.btnRefreshFrgCatalog.makeVisible()
+                        }
+                    }
+                }
+            }
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.error.collect { message ->
+                    Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 
     private fun setupRecyclerView() {
@@ -103,6 +141,10 @@ class CatalogFragment : Fragment() {
 
                 sortedList = sortedList.sortedBy { it.price.priceWithDiscount.toInt() }
                 adapterCatalog.setProductList(sortedList)
+            }
+
+            btnRefreshFrgCatalog.setOnClickListener {
+                viewModel.onLoadDataClick()
             }
         }
     }

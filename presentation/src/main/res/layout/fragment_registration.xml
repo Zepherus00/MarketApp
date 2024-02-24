@@ -80,4 +80,9 @@
             style="@style/text_loyal_2_frg_registration"
             android:text="@string/loyal_program_2_frg_registration" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_frg_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </FrameLayout>

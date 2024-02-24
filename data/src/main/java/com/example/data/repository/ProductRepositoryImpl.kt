@@ -15,6 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Call
+import java.net.ConnectException
 
 class ProductRepositoryImpl : ProductRepository {
     fun getAllEntities(): LiveData<List<Product>> {
@@ -41,11 +42,13 @@ class ProductRepositoryImpl : ProductRepository {
                     val products = convertProductModelToSaveProduct(tempProductList)
                     function(products)
                 } else {
+                    throw ConnectException(response.message())
                     Log.d("error", "Mistake")
                 }
             }
 
             override fun onFailure(call: Call<ProductList>, t: Throwable) {
+                throw ConnectException(t.message)
                 Log.d("error", "Mistake")
             }
         })
