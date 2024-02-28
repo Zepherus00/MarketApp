@@ -1,6 +1,5 @@
 package com.example.domain.usecase
 
-import android.util.Log
 import com.example.domain.model.SaveProductModel
 import com.example.domain.repository.ProductRepository
 
