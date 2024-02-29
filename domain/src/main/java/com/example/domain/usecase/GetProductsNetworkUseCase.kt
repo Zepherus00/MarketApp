@@ -5,9 +5,7 @@ import com.example.domain.repository.ProductRepository
 
 class GetProductsNetworkUseCase(private val productRepository: ProductRepository) {
 
-    fun execute(function: (List<SaveProductModel>) -> Unit) {
-        productRepository.getProductListFromNetwork { productList ->
-            function(productList)
-        }
+    suspend fun execute(): List<SaveProductModel> {
+        return productRepository.getProductListFromNetwork()
     }
 }

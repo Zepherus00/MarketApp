@@ -33,7 +33,6 @@ class CatalogViewModel(
     }
 
     fun onLoadDataClick() {
-        _state.value = CatalogState.Loading
         loadData()
     }
 
@@ -44,10 +43,9 @@ class CatalogViewModel(
     private fun loadData() {
         viewModelScope.launch {
             try {
-                getProductsNetworkUseCase.execute {
-                    _productsFromNetwork.value = it
-                    _state.value = CatalogState.Success
-                }
+                _state.value = CatalogState.Loading
+                _productsFromNetwork.value = getProductsNetworkUseCase.execute()
+                _state.value = CatalogState.Success
             } catch (e: Exception) {
                 _state.value = CatalogState.Error
                 _error.send(e.message.toString())

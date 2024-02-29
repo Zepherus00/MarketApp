@@ -1,10 +1,8 @@
 package com.example.data.repository
 
-import android.util.Log
 import androidx.lifecycle.LiveData
-import com.example.data.model.ProductList
 import com.example.data.model.ProductModel
-import com.example.data.network.ProductService
+import com.example.data.network.DataSource
 import com.example.data.room.Dependencies.productDao
 import com.example.data.room.product.Product
 import com.example.data.utilities.toProduct
@@ -13,9 +11,8 @@ import com.example.domain.model.SaveProductModel
 import com.example.domain.repository.ProductRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import retrofit2.Call
-import java.net.ConnectException
 
 class ProductRepositoryImpl : ProductRepository {
     fun getAllEntities(): LiveData<List<Product>> {
@@ -29,30 +26,14 @@ class ProductRepositoryImpl : ProductRepository {
         }
     }
 
-    override fun getProductListFromNetwork(function: (List<SaveProductModel>) -> Unit) {
-        val call = ProductService.productService.getProducts()
-
-        call.enqueue(object : retrofit2.Callback<ProductList> {
-            override fun onResponse(
-                call: Call<ProductList>,
-                response: retrofit2.Response<ProductList>
-            ) {
-                if (response.isSuccessful) {
-                    val tempProductList = response.body()?.items
-                    val products = convertProductModelToSaveProduct(tempProductList)
-                    function(products)
-                } else {
-                    throw ConnectException(response.message())
-                    Log.d("error", "Mistake")
-                }
-            }
-
-            override fun onFailure(call: Call<ProductList>, t: Throwable) {
-                throw ConnectException(t.message)
-                Log.d("error", "Mistake")
-            }
-        })
+    override suspend fun getProductListFromNetwork(): List<SaveProductModel> {
+        return CoroutineScope(Dispatchers.IO).async {
+            val productList = DataSource().loadData().items
+            val saveProductModel = convertProductModelToSaveProduct(productList)
+            saveProductModel
+        }.await()
     }
+
 
     override fun clearTable() {
         CoroutineScope(Dispatchers.IO).launch {

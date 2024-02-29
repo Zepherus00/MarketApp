@@ -40,6 +40,7 @@ dependencies {
 
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
